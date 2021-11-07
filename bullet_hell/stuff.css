@@ -1,0 +1,115 @@
+body {
+    background: black;
+    color: whitesmoke;
+    font-family: sans-serif;
+    user-select: none;
+}
+* {
+    margin: 0px 0px;
+}
+.main {
+    border:  1px #cbcbcb solid;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 10px;
+
+    width: 80%;
+    height: 80%;
+}
+.width-100 {
+    width: 100%;
+}
+.mrg-25 {
+    margin-bottom: 25px;
+}
+.x-center {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+.main-game {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    width: 70%;
+    height: 100%;
+    border-right: #cbcbcb 1px solid;
+
+    overflow: hidden;
+}
+.right-section {
+    position: absolute;
+    left: 70%;
+    top: 0px;
+
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    
+    overflow: hidden;
+}
+
+
+
+
+/*Elements*/
+.player {
+    position: absolute;
+    bottom: 10px;
+    transform: translateX(-50%);
+
+    width: 30px;
+    height: 30px;
+
+    background: black;
+    border: #cbcbcb 1px solid;
+    
+    z-index: 2;
+    transition: background 0.2s;
+}
+.bullet {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    transform: translateX(-50%);
+
+    background: #cbcbcb;
+    
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-name: player_bullets;
+}
+.enemy_bullet {
+    position: absolute;
+    top: -15px;
+    transition: all 3s;
+    transition-timing-function: linear;
+
+    width: 15px;
+    height: 15px;
+    
+    background: rgb(247, 150, 150);
+}
+
+
+
+
+
+
+/*Bullet animations*/
+@keyframes player_bullets {
+    from {
+        bottom: 10px;
+    }
+
+    to {
+        bottom: 100%;
+    }
+}
