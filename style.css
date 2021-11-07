@@ -1,0 +1,28 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background: black;
+    color: white;
+    font-style: italic;
+    user-select: none;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+}
+* {
+    margin: 0px 0px;
+}
+img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+.description {
+    margin-top: 20px;
+}
