@@ -1,0 +1,89 @@
+body {
+    background: black;
+    color: whitesmoke;
+    font-family: sans-serif;
+    user-select: none;
+}
+* {
+    margin: 0px 0px;
+    font-weight: 200;
+}
+.main, .captcha {
+    background: black;
+    border:  1px #cbcbcb solid;
+
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 10px;
+
+    width: 50%;
+    height: 80%;
+}
+.width-100 {
+    width: 100%;
+}
+.mrg-25 {
+    margin-bottom: 25px;
+}
+.x-center {
+    width: 30%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.op-h {
+    opacity: 0.3;
+}
+.btm {
+    position: absolute;
+    bottom: 30px;
+    width: 50%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+input[autocomplete="off"] {
+    width: 100%;
+
+    border: none;
+    outline: none;
+    border-bottom: 1px #cbcbcb solid;
+
+    background: transparent;
+    color: white;
+    font-size: 120%;
+}
+h5 {
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+label {
+    font-size: 70%;
+    position: relative;
+    bottom: 2.5px;
+}
+button {
+    margin-top: 20px;
+    text-transform: uppercase;
+    background: black;
+    border: none;
+    outline: none;
+    border-bottom: 1px rgb(165, 165, 165) solid;
+    border-top: 1px rgb(165, 165, 165) solid;
+    color: rgb(165, 165, 165);
+}
+.canvas-collection {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+}

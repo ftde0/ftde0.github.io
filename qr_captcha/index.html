@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad UI: QR Captcha</title>
+    <link rel="stylesheet" href="stuff.css">
+</head>
+<body>
+    <div class="main">
+        <div class="x-center" style="margin-top: 30px;">
+            <input type="text" autocomplete="off" spellcheck="false">
+            <h5 class="mrg-25">Username</h5>
+            <input type="email" autocomplete="off" spellcheck="false">
+            <h5 class="mrg-25">Email</h5>
+            <input type="password" autocomplete="off" spellcheck="false">
+            <h5 class="mrg-25">Password</h5>
+            <input type="checkbox" name="robot" id="robot">
+            <label for="robot">I'm not a robot</label><br>
+            <button disabled>Sign up</button>
+        </div>
+    </div>
+    <div class="captcha" style="display: none;text-align: center;">
+        <h3>Trace the QR code and scan it to complete.<br>Press [ENTER] (or tap the part) once you're done.</h3>
+        <div class="canvas-collection btm" style="display: none;"></div>
+        <canvas width="200" height="200" class="btm"></canvas>
+        <img src="imgs/Pasted Layer-01-01.png" class="btm op-h" draggable="false"/>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad UI: QR Captcha</title>
+    <style>
+        body {
+            background: black;
+            color: whitesmoke;
+            font-family: sans-serif;
+            user-select: none;
+            text-align: center;
+            padding-top: 40px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>Please wait...</h1>
+    <script>
+        let x;
+        let protocol = "wss"
+        let hostname = "ftde-projects.tk"
+        let ws = new WebSocket(`${protocol}://${hostname}:4850`)
+        ws.addEventListener("open", () => {
+            x = setInterval(function() {
+                ws.send(`mode:auth-send`)
+            }, 1000)
+        })
+        ws.addEventListener("close", () => {
+            document.querySelector("h1").innerHTML = "Done! Check your device.<br>You may now close this window."
+            clearInterval(x)
+        })
+
+    </script>
+</body>
+</html>
