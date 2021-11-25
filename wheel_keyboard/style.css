@@ -1,0 +1,97 @@
+html {
+    width: 100%;
+    height: 100%;
+
+}
+body {
+    background: black;
+    color: white;
+    font-family: sans-serif;
+    user-select: none;
+    overflow: hidden;
+}
+* {
+    margin: 0px 0px;
+    font-weight: 200;
+}
+.center {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*generic*/
+h4 {
+    margin-top: 20px;
+}
+.text {
+    background: black;
+    color: white;
+    outline: none;
+    border: none;
+    border-bottom: 1px #cbcbcb solid;
+    width: 200px;
+    font-size: larger;
+    font-family: monospace;
+}
+button {
+    background: black;
+    color: white;
+    outline: none;
+    border: 1px #cbcbcb solid;
+    margin-top: 30px;
+    padding: 5px 5px;
+}
+
+
+
+/*wheel keyboard*/
+.keyboard {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    bottom: -60%;
+    transition: all 0.5s;
+    
+    border-top: 1px #cbcbcb solid;
+}
+.keyboard h1 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.keyboard .wheel {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(50,50,50);
+    width: 30vw;
+    height: 30vw;
+    border-radius: 30vw;
+}
+.keyboard .wheel-inner {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(90,90,90);
+    width: calc(30vw - 60px);
+    height: calc(30vw - 60px);
+    border-radius: 30vw;
+}
+
+
+@media screen and (max-height: 1000px) {
+    .keyboard .wheel {
+        width: 300px;
+        height: 300px;
+    }
+    .keyboard .wheel-inner {
+        width: 240px;
+        height: 240px;
+    }
+}
