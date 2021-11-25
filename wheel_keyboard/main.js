@@ -87,6 +87,14 @@ $(".wheel").addEventListener("mousemove", (e) => {
     }
 })
 
+$(".wheel").addEventListener("touchmove", (e) => {
+    $(".wheel").dispatchEvent(new MouseEvent("mousemove", {buttons: 1, offsetX: e.changedTouches[0].pageX, offsetY: e.changedTouches[0].pageY}))
+})
+
+$(".wheel").addEventListener("touchend", () => {
+    offsets = []
+})
+
 $(".wheel").addEventListener("mouseup", () => {
     offsets = []
 })
