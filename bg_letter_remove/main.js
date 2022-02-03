@@ -100,8 +100,9 @@ document.addEventListener("keydown", (e) => {
 
         if(remaining_clickables.length == 30) {
             // if nothing is removed end the whole thing
-            $(".keyboard").style.display = "none"
-            active_box.value =  $(".keyboard-preview-text").value
+            active_box.value = $(".keyboard-preview-text").value
+            $(".keyboard-preview-text").value = ""
+            $(".keyboard").style.display = "none"           
         }
 
 
