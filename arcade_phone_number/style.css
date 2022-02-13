@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "Digits";
+    src: url("./number-font.ttf");
+}
+body {
+    background: black;
+    color: white;
+    font-family: "Segoe UI", "Ubuntu", "Seravek", sans-serif;
+    user-select: none;
+    overflow: hidden;
+}
+* {
+    margin: 0px 0px;
+    font-weight: 200;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 10px;
+    border: 3px #cbcbcb solid;
+}
+.left-center {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center h2 {
+    text-align: center;
+}
+.game {
+    width: 500px;
+    height: 500px;
+    border: 2px #cbcbcb solid;
+    border-radius: 5px;
+    text-align: center;
+}
+.number {
+    margin-top: 15px;
+    font-family: "Digits";
+    color: #65FF65;
+}
+.holes {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+.hole {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border: 3px #ffa100 solid;
+    border-radius: 50px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    transition: background 0.1s;
+    cursor: pointer;
+}
