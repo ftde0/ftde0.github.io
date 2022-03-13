@@ -1,0 +1,51 @@
+body {
+    background: black;
+    color: white;
+    font-family: monospace;
+    user-select: none;
+    overflow: hidden;
+    text-align: center;
+}
+* {
+    margin: 0px 0px;
+    font-weight: 200;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 1px #cbcbcb solid;
+    padding: 10px 10px;
+}
+.game-space {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+}
+.grid_part {
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+}
+.control_buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.control_buttons button {
+    background: rgba(200, 200, 200, 0.3);
+    outline: none;
+    border: 1px #cbcbcb solid;
+    border-radius: 5px;
+    padding: 5px 5px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    touch-action: manipulation;
+}
+.control_buttons button:active {
+    background-color: rgba(200, 200, 200, 0.7);
+}
