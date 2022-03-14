@@ -30,22 +30,3 @@ body {
     height: 50px;
     font-size: 40px;
 }
-.control_buttons {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-}
-.control_buttons button {
-    background: rgba(200, 200, 200, 0.3);
-    outline: none;
-    border: 1px #cbcbcb solid;
-    border-radius: 5px;
-    padding: 5px 5px;
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
-    touch-action: manipulation;
-}
-.control_buttons button:active {
-    background-color: rgba(200, 200, 200, 0.7);
-}

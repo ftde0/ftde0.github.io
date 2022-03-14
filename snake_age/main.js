@@ -9,6 +9,7 @@ let snakePositions = [0, 1, 2]
 let applePosition = Math.floor(Math.random() * 100)
 let applePrice = ["-3", "-2", "-1", "1", "2"][Math.floor(Math.random() * 5)]
 let score = 0;
+let moveQueue = []
 let direction = 1 /*
 
 directions:
@@ -33,6 +34,7 @@ document.addEventListener("keydown", (e) => {
         case "w": {
             // go up if we're not going down
             if(direction == 10) return;
+            moveQueue.push(-10)
             direction = -10;
             break;
         }
@@ -40,6 +42,7 @@ document.addEventListener("keydown", (e) => {
         case "s": {
             // go down if we're not going up
             if(direction == -10) return;
+            moveQueue.push(10)
             direction = 10;
             break;
         }
@@ -47,6 +50,7 @@ document.addEventListener("keydown", (e) => {
         case "a": {
             // go left if we're not going right
             if(direction == 1) return;
+            moveQueue.push(-1)
             direction = -1;
             break;
         }
@@ -54,6 +58,7 @@ document.addEventListener("keydown", (e) => {
         case "d": {
             // go right if we're not going left
             if(direction == -1) return;
+            moveQueue.push(1)
             direction = 1;
             break;
         }
@@ -87,14 +92,15 @@ Snake movement & mechanics
 */
 let movement = setInterval(function() {
     snakePositions.shift()
-    snakePositions.push(snakePositions[snakePositions.length - 1] + direction);
+    snakePositions.push(snakePositions[snakePositions.length - 1] + (moveQueue[0] || direction));
+    moveQueue.shift()
 
     // check if an apple is hit
     let snakeHead = snakePositions[snakePositions.length - 1]
     if(snakeHead == applePosition) {
         $(".grid_part")[applePosition].innerHTML = ""
         let oldApplePos = applePosition
-        while(oldApplePos == applePosition) {
+        while(oldApplePos == applePosition || snakePositions.includes(applePosition)) {
             applePosition = Math.floor(Math.random() * 100)
         }
         let c = 0;
@@ -112,10 +118,13 @@ let movement = setInterval(function() {
     // check if a wall is hit
     // 1st check - left
     // 2nd check - right
-    // 3rd check - up & down
+    // 3rd check - down
+    // 4th check - up
+    console.log(Math.floor(snakeHead / 10 % 10))
     if((direction == -1 && snakeHead % 10 == 9) ||
         (direction == 1 && snakeHead % 10 == 0) || 
-        (direction == 10 && Math.floor(snakeHead / 10 % 10) == 0)) {
+        (direction == 10 && Math.floor(snakeHead / 10 % 10) == 0) ||
+        (direction == -10 && Math.floor(snakeHead / 10 % 10) == -1)) {
         
         gameEnd();
     }
@@ -149,11 +158,43 @@ function gameEnd() {
 
 /*
 ========
-Touch buttons
+Touch swiping
 ========
 */
-$(".control_buttons button").forEach(button => {
-    button.addEventListener("click", (e) => {
-        document.dispatchEvent(new KeyboardEvent("keydown", {key: button.getAttribute("data-key")}))
-    })
+let touchX = []
+let touchY = []
+document.addEventListener("touchstart", (e) => {
+    touchX = [e.touches[0].clientX]
+    touchY = [e.touches[0].clientY]
+})
+document.addEventListener("touchend", (e) => {
+    let resultKey = ""
+    touchX.push(e.changedTouches[0].clientX)
+    touchY.push(e.changedTouches[0].clientY)
+    // find what direction the touch was made in (horizontally/vertically)
+    let xAxis = false;
+
+    if(Math.abs(touchX[0] - touchX[1]) > Math.abs(touchY[0] - touchY[1])) {xAxis = true;}
+
+    // go left/right?
+    if(xAxis && touchX[0] > touchX[1]) {
+        // left
+        resultKey = "ArrowLeft"
+    } else if(xAxis && touchX[0] < touchX[1]) {
+        // right
+        resultKey = "ArrowRight"
+    }
+
+    // go up/down?
+    if(!xAxis && touchY[0] > touchY[1]) {
+        // up
+        resultKey = "ArrowUp"
+    } else if(!xAxis && touchY[0] < touchY[1]) {
+        // down
+        resultKey = "ArrowDown"
+    }
+
+
+
+    document.dispatchEvent(new KeyboardEvent("keydown", {key: resultKey}))
 })
