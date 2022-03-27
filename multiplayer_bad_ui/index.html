@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+    <title>Bad UI: Multiplayer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center signup">
+        <h1>Sign up</h1>
+        <input type="text" autocomplete="off" spellcheck="false" class="username"><br>
+        <h4>Username</h4>
+        <input type="text" autocomplete="off" spellcheck="false" class="email"><br>
+        <h4>Email</h4>
+        <input type="password" autocomplete="off" spellcheck="false" class="password"><br>
+        <h4>Password</h4>
+        <input type="checkbox" id="robot">
+        <label for="robot">I'm not a robot</label><br>
+        <button class="x-center">Sign up</button>
+    </div>
+    <div class="full game_overlay" style="display: none;">
+        <h1 class="dir_arrow x-center">🢂</h1>
+        <div class="center game">
+        
+        </div>
+        <p class="playing_with x-center"></p>
+        <p class="data_counter">data sent: 0b<br>data received: 0b</p>
+    </div>
+    <div class="full overlay" style="display: none;">
+        <h3 class="center broadcast">Text</h3>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
