@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WindNumber</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center site-content">
+        <h1 class="display-city">loading...</h1>
+        <h4 class="wind">Wind speed: 0m/s<br>Direction: 🢀<br>Press ENTER/Touch once done.</h4>
+        <h5 class="number-text"></h5>
+        <input type="range" min="0" max="9999999999" readonly></input>
+    </div>
+    <div class="center alert-box initial">
+        <div class="content">
+            <h1>First things first...</h1>
+            <input type="text" class="city-name" placeholder="City name"></input><br>
+            <input type="text" class="api-key" placeholder="OpenWeatherMap API key (optional)"></input><br>
+            <input type="text" class="number-format" placeholder="Phone number format (use = as a digit)"></input><br>
+            <input type="checkbox" class="units" id="units"></input>
+            <label for="units">Use imperial (mph)</label>
+        </div>
+        <footer>
+            <button>OK</button>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+
+    <!--itsok-->
+</body>
+</html>
