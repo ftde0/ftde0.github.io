@@ -32,6 +32,7 @@ input[type="text"] {
     width: 70%;
     text-align: center;
     margin-top: 15px;
+    color: white;
 }
 button {
     margin-top: 40px;
