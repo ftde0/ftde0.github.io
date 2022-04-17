@@ -1,4 +1,4 @@
-# Bullet hell phone number entry
+# Wheel Keyboard
 
 Based on [The MacBook Wheel Video](https://www.youtube.com/watch?v=9BnLbv6QYcA), you have to enter text using an even worse iteration of the wheel.
 

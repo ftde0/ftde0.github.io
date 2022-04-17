@@ -6,6 +6,8 @@ A phone number slider that can only be controlled by your local wind (Retrieved 
 
 Live: https://ftde0.github.io/wind_number
 
+Comment: https://www.reddit.com/r/badUIbattles/comments/tuudd3/windcontrolled_phone_number_slider/
+
 ---
 
 ## Usage
