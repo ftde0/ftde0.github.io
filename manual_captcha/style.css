@@ -1,0 +1,87 @@
+body {
+    background: white;
+    color: black;
+    font-family: "Segoe UI", "Ubuntu", "Seravek", sans-serif;
+    user-select: none;
+    overflow: hidden;
+}
+* {
+    margin: 0px 0px;
+    font-weight: 200;
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.captcha {
+    border-radius: 10px;
+    display: flex;
+    border: 1px black solid;
+    padding: 20px 20px;
+    width: 300px;
+}
+
+.checkbox {
+    width: 32px;
+    height: 32px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.checkbox.checked {
+    background: url("check.gif");
+}
+
+.checkbox.load {
+    background: url("load.gif");
+}
+
+
+
+
+
+
+.captcha_window {
+    display: none;
+    width: 400px;
+    height: 400px;
+    background: white;
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+canvas.checkmark {
+    width: 150px;
+    height: 150px;
+    border: 1px black solid;
+    background: url("checkmark.png");
+}
+
+canvas.handwrite {
+    margin-top: 15px;
+    width: 300px;
+    height: 100px;
+    border: 1px black solid;
+    background: url("robot-text.png");
+}
+
+button {
+    margin-top: 15px;
+    border: 1px black solid;
+    border-radius: 5px;
+    background: none;
+    color: black;
+    outline: none;
+}
+
+.incorrect {
+    display: none;
+    color: red;
+}
