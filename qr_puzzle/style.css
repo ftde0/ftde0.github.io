@@ -1,0 +1,46 @@
+body {
+    background: black;
+    color: white;
+    font-family: sans-serif;
+    user-select: none;
+    overflow: hidden;
+}
+* {
+    margin: 0px 0px;
+    font-weight: 200;
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.x-center {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.puzzle {
+    margin-top: 30px;
+    width: 256px;
+    height: 256px;
+    display: flex;
+    flex-wrap: wrap;
+    outline: 4px #cbcbcb solid;
+    overflow: hidden;
+}
+
+button {
+    margin-top: 30px;
+    padding: 10px 10px;
+    font-size: 24px;
+    background: rgb(40, 40, 40);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
