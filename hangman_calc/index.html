@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Calculator - Bad UI showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="center main">
+        <div class="calc_container center">
+            <input class="calc_display" spellcheck="false" autocomplete="off"></input>
+            <div class="keypad">
+                <div class="column c1">
+                    <button>7</button>
+                    <button>4</button>
+                    <button>1</button>
+                    <button>0</button>
+                </div>
+                <div class="column c2">
+                    <button>8</button>
+                    <button>5</button>
+                    <button>2</button>
+                    <button>.</button>
+                </div>
+                <div class="column c3">
+                    <button>9</button>
+                    <button>6</button>
+                    <button>3</button>
+                    <button>=</button>
+                </div>
+                <div class="column c4">
+                    <button>/</button>
+                    <button>*</button>
+                    <button>+</button>
+                    <button>-</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="hangman overlay hide">
+        <div class="center">
+            <img src="hangman_steps/0.png" draggable="false"/>
+            <h2>The answer is the calculation. Good luck.</h2>
+            <h1 class="fill"></h1>
+            <div class="flex h_keypad">
+                <button>0</button> 
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>.</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
