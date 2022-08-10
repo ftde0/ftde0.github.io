@@ -43,7 +43,8 @@ bring up hangman
 function hangman() {
     $(".calc_display").value = $(".calc_display").value.replaceAll(/[^0-9+.+\++\-+*+\/+]/gi, "")
     $(".hangman").classList.remove("hide")
-    let result = eval($(".calc_display").value)
+    let result = parseFloat(eval($(".calc_display").value))
+    isFinite(result) ? "" : result = 0
     $(".fill").innerHTML = "_".repeat(result.toString().length)
 }
 
@@ -59,7 +60,8 @@ $(".h_keypad button").forEach(btn => {
         btn.setAttribute("disabled", "")
 
 
-        let result = eval($(".calc_display").value)
+        let result = parseFloat(eval($(".calc_display").value))
+        isFinite(result) ? "" : result = 0
         if(result.toString().includes(btn.innerHTML)) {
             // includes the number
             // find where the number pops up and fill .fill based on that
@@ -87,6 +89,7 @@ $(".h_keypad button").forEach(btn => {
         } else {
             // next hangman step if invalid
             s++;
+            if(s >= 6) return;
             $("img").src = `hangman_steps/${s}.png`
 
             // lose if s == 5
