@@ -1,0 +1,75 @@
+body {
+    background: white;
+    color: black;
+    font-family: sans-serif;
+    user-select: none;
+    overflow: hidden;
+}
+
+* {
+    margin: 0px 0px;
+    font-weight: 200;
+}
+
+.hide {
+    display: none;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+button {
+    background: white;
+    border: 1px black solid;
+    border-radius: 5px;
+    margin-top: 5px;
+    outline: none;
+    padding: 5px 5px;
+    color: black;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+
+
+.connect-code {
+    font-family: monospace;
+}
+
+input[type="text"], input[type="password"] {
+    margin-top: 25px;
+    border: none;
+    border-bottom: 1px black solid;
+    outline: none;
+    font-size: 20px;
+}
+
+.wheel {
+    width: 500px;
+    height: 500px;
+    background: url("text.png");
+}
+
+svg {
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    transform: translateX(-50%);
+}
+
+.action-buttons {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.character {
+    font-size: 150%;
+    margin-top: 15px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spin keyboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="center context">
+        <h1>Sign in</h1>
+        <input type="text" class="fi" placeholder="Username"></input><br>
+        <input type="password" class="fi" placeholder="Password"></input><br>
+        <button>Submit</button>
+    </div>
+    
+    <div class="center main hide">
+        <h1>spin-keyboard</h1>
+        <h3>To continue, navigate to <a href="spin.html" target="_blank">spin.html</a> with a device with an accelerometer.
+        <br>Once you're in, type the following code to connect:</h3>
+        <h1 class="connect-code">[loading]</h1>
+    </div>
+
+    <div class="center spin-wheel hide">
+        <h1 class="entered-text"></h1>
+        <h1 class="character"></h1>
+        <svg xmlns="http://www.w3.org/2000/svg"
+            width="50px" height="50px"
+            viewBox="0 0 50 50"
+            class="arrow-pointer">
+        <path id="Selection"
+                fill="black" stroke="black" stroke-width="1"
+                d="M 1.00,0.00
+                C 1.00,0.00 49.00,0.00 49.00,0.00
+                    49.00,0.00 33.00,17.00 33.00,17.00
+                    33.00,17.00 25.26,25.30 25.26,25.30
+                    25.26,25.30 17.00,17.00 17.00,17.00
+                    17.00,17.00 1.00,0.00 1.00,0.00 Z" />
+        </svg>
+
+        <div class="wheel"></div>
+        <div class="action-buttons hide">
+            <button class="button-enter-char">Enter</button>
+            <button class="button-done">Done</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
